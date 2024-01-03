@@ -5,6 +5,9 @@ module.exports = {
   purge: ["./**/*.{html,js}"],
   theme: {
     extend: {
+      boxShadow: {
+        btn: "1px 2px 2px 1px rgb(0 0 0 /.75);",
+      },
       minHeight: {
         card: "700px",
       },
