@@ -1,6 +1,7 @@
 import "./layout.js";
 
 const test = document.querySelectorAll(".gameCard");
+const players = document.querySelectorAll(".player");
 
 function toggleXO(e) {
   const card = e.target;
@@ -14,6 +15,18 @@ function toggleXO(e) {
   }
 }
 
+function checkPlayer(e) {
+  if (e.target.textContent === "X") {
+    console.log("Player X");
+  } else {
+    console.log("Player O");
+  }
+}
+
 test.forEach((card) => {
   card.addEventListener("click", toggleXO);
+});
+
+players.forEach((player) => {
+  player.addEventListener("click", checkPlayer);
 });

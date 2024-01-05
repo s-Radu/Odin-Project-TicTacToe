@@ -13,9 +13,6 @@
     <div class="container flex justify-between">
         <img src="img/navImg.svg" alt="Logo" class="h-14 m-2 cursor-pointer">
         <div class="items-center flex">
-            <button class="rounded-xl font-josefin bg-blue-400 m-3 hover:bg-blue-500 p-1" id='startGame'>
-                Start game
-            </button>
             <button class="rounded-xl font-josefin bg-blue-400 m-3 hover:bg-blue-500 p-1" id='restartGame'>
                 Reset game
             </button>
@@ -29,9 +26,9 @@
 
       <div class="">
           <button
-              class="bg-transparent w-20 border-2 border-black rounded-xl m-3 hover:bg-gray-200 ease-in duration-300 shadow-btn">X</button>
+              class="player bg-transparent w-20 border-2 border-black rounded-xl m-3 hover:bg-gray-200 ease-in duration-300 shadow-btn">X</button>
           <button
-              class="bg-transparent w-20 border-2 border-black rounded-xl m-3 hover:bg-gray-200 ease-in duration-300 shadow-btn">O</button>
+              class="player bg-transparent w-20 border-2 border-black rounded-xl m-3 hover:bg-gray-200 ease-in duration-300 shadow-btn">O</button>
       </div>
 
   </div>
