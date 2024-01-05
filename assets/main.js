@@ -4,12 +4,13 @@ const test = document.querySelectorAll(".gameCard");
 
 function toggleXO(e) {
   const card = e.target;
-  if (card.classList.contains("after:content-['X']")) {
-    card.classList.remove("after:content-['X']");
-    card.classList.add("after:content-['O']");
+  //   if (!card.hasChildNodes()) { //* Both of these conditions work, initially tried with reverse condition on hasChildNodes, but encountered an error where I had empty spaces in HTML and it would not work, because hasChildNodes checks for empty spaces as well ( white space ).
+  if (card.textContent.trim() === "") {
+    const element = document.createElement("p");
+    element.innerText = "X";
+    card.appendChild(element);
   } else {
-    card.classList.remove("after:content-['O']");
-    card.classList.add("after:content-['X']");
+    console.log("You can't park there mate");
   }
 }
 

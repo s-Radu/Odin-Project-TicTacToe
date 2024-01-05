@@ -36,35 +36,17 @@
 
   </div>
 
-  <div class="container mx-auto w-3/4 p-3 h-96">
-      <div class="grid grid-cols-3 gap-4 h-full place-items-center">
-          <div
-              class="gameCard w-2/4 h-full border-2 border-black rounded-xl hover:cursor-pointer relative  after:absolute after:left-2/4 after:top-2/4 after:text-9xl after:-translate-x-1/2 after:-translate-y-1/2">
-          </div>
-          <div
-              class="gameCard w-2/4 h-full border-2 border-black rounded-xl hover:cursor-pointer relative  after:absolute after:left-2/4 after:top-2/4 after:text-9xl after:-translate-x-1/2 after:-translate-y-1/2">
-          </div>
-          <div
-              class="gameCard w-2/4 h-full border-2 border-black rounded-xl hover:cursor-pointer relative  after:absolute after:left-2/4 after:top-2/4 after:text-9xl after:-translate-x-1/2 after:-translate-y-1/2">
-          </div>
-          <div
-              class="gameCard w-2/4 h-full border-2 border-black rounded-xl hover:cursor-pointer relative  after:absolute after:left-2/4 after:top-2/4 after:text-9xl after:-translate-x-1/2 after:-translate-y-1/2">
-          </div>
-          <div
-              class="gameCard w-2/4 h-full border-2 border-black rounded-xl hover:cursor-pointer relative  after:absolute after:left-2/4 after:top-2/4 after:text-9xl after:-translate-x-1/2 after:-translate-y-1/2">
-          </div>
-          <div
-              class="gameCard w-2/4 h-full border-2 border-black rounded-xl hover:cursor-pointer relative  after:absolute after:left-2/4 after:top-2/4 after:text-9xl after:-translate-x-1/2 after:-translate-y-1/2">
-          </div>
-          <div
-              class="gameCard w-2/4 h-full border-2 border-black rounded-xl hover:cursor-pointer relative  after:absolute after:left-2/4 after:top-2/4 after:text-9xl after:-translate-x-1/2 after:-translate-y-1/2">
-          </div>
-          <div
-              class="gameCard w-2/4 h-full border-2 border-black rounded-xl hover:cursor-pointer relative  after:absolute after:left-2/4 after:top-2/4 after:text-9xl after:-translate-x-1/2 after:-translate-y-1/2">
-          </div>
-          <div
-              class="gameCard w-2/4 h-full border-2 border-black rounded-xl hover:cursor-pointer relative  after:absolute after:left-2/4 after:top-2/4 after:text-9xl after:-translate-x-1/2 after:-translate-y-1/2">
-          </div>
+  <div class="container mx-auto w-2/4 p-3 h-3/4 flex items-center justify-center">
+      <div class="grid grid-cols-3 place-items-center">
+          <button class="gameCard border-4 border-l-0 border-t-0 text-9xl min-h-36 min-w-32"></button>
+          <button class="gameCard border-4 border-l-0 border-r-0 border-t-0 text-9xl min-h-36 min-w-32 "></button>
+          <button class="gameCard border-4 border-r-0 border-t-0 text-9xl min-h-36 min-w-32"></button>
+          <button class="gameCard border-4 border-l-0 text-9xl min-h-36 min-w-32 "></button>
+          <button class="gameCard border-4 border-l-0 border-r-0 text-9xl min-h-36 min-w-32 "></button>
+          <button class="gameCard border-4 border-r-0 text-9xl min-h-36 min-w-32"></button>
+          <button class="gameCard border-4 border-l-0 border-b-0 text-9xl min-h-36 min-w-32"></button>
+          <button class="gameCard border-4 border-l-0 border-r-0 border-b-0 text-9xl min-h-36 min-w-32"></button>
+          <button class="gameCard border-4 border-r-0 border-b-0 text-9xl min-h-36 min-w-32"></button>
       </div>
   </div>
 </div>`;
