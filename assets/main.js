@@ -24,22 +24,22 @@ const game = (function () {
       PLAYER1.marker === "X"
         ? (PLAYER2 = _createPlayer("Player 2", "O"))
         : (PLAYER2 = _createPlayer("Player 2", "X"));
+      alert(`Player 1 is ${PLAYER1.marker} and Player 2 is ${PLAYER2.marker}`);
+    } else {
+      alert("Players already chosen");
     }
-
-    alert(`Player 1 is ${PLAYER1.marker} and Player 2 is ${PLAYER2.marker}`);
   }
 
   //* Announce player choice and player turn
-  // > Needs improving with text from from selected player's markers and when each turn is
   //< Chould add an effect for stacking text ( as notifications ) for each movement, or just add notifications like event if the function is triggered many times
 
   //* cache DOM
-  const test = document.querySelectorAll(".gameCard");
+  const gameCard = document.querySelectorAll(".gameCard");
   const players = document.querySelectorAll(".player");
   const resetGame = document.querySelector("#restartGame");
 
   // * bind events
-  test.forEach((card) => {
+  gameCard.forEach((card) => {
     card.addEventListener("click", _toggleXO);
   });
 
@@ -47,16 +47,25 @@ const game = (function () {
     player.addEventListener("click", _storePlayer);
   });
 
-  resetGame.addEventListener("click", () =>
-    _announcements("sarmale prajite sa ma cac pe mine")
-  );
+  //> Add hover effect for game card with player's choice
+  gameCard.forEach((card) => {
+    card.addEventListener("mouseenter", _hoverEffect);
+  });
+  //> Remove hover effect from game card
+
+  //* Hover effect for player choice
+
+  function _hoverEffect(e) {
+    e.textContent = PLAYER1.marker;
+    console.log("something is off boss");
+  }
 
   function _toggleXO(e) {
     const card = e.target;
     //   if (!card.hasChildNodes()) { //* Both of these conditions work, initially tried with reverse condition on hasChildNodes, but encountered an error where I had empty spaces in HTML and it would not work, because hasChildNodes checks for empty spaces as well ( white space ).
     if (card.textContent.trim() === "") {
       const element = document.createElement("p");
-      element.innerText = "X";
+      element.innerText = PLAYER1.marker;
       card.appendChild(element);
     } else {
       console.log("You can't park there mate");

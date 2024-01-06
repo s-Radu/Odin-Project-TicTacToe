@@ -43,23 +43,23 @@
   <div class="container mx-auto w-2/4 p-3 mt-10 h-3/4 flex items-center justify-center">
       <div class="grid grid-cols-3 place-items-center">
           <button
-              class="gameCard border-4 border-l-0 border-t-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32"></button>
+              class="gameCard border-4 border-l-0 border-t-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32 after:left-2/4 after:top-2/4 "></button>
           <button
-              class="gameCard border-4 border-l-0 border-r-0 border-t-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32 "></button>
+              class="gameCard border-4 border-l-0 border-r-0 border-t-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32 after:left-2/4 after:top-2/4  "></button>
           <button
-              class="gameCard border-4 border-r-0 border-t-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32"></button>
+              class="gameCard border-4 border-r-0 border-t-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32 after:left-2/4 after:top-2/4 "></button>
           <button
-              class="gameCard border-4 border-l-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32 "></button>
+              class="gameCard border-4 border-l-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32 after:left-2/4 after:top-2/4  "></button>
           <button
-              class="gameCard border-4 border-l-0 border-r-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32 "></button>
+              class="gameCard border-4 border-l-0 border-r-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32 after:left-2/4 after:top-2/4  "></button>
           <button
-              class="gameCard border-4 border-r-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32"></button>
+              class="gameCard border-4 border-r-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32 after:left-2/4 after:top-2/4 "></button>
           <button
-              class="gameCard border-4 border-l-0 border-b-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32"></button>
+              class="gameCard border-4 border-l-0 border-b-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32 after:left-2/4 after:top-2/4 "></button>
           <button
-              class="gameCard border-4 border-l-0 border-r-0 border-b-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32"></button>
+              class="gameCard border-4 border-l-0 border-r-0 border-b-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32 after:left-2/4 after:top-2/4 "></button>
           <button
-              class="gameCard border-4 border-r-0 border-b-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32"></button>
+              class="gameCard border-4 border-r-0 border-b-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32 after:left-2/4 after:top-2/4 "></button>
       </div>
   </div>
 </div>`;
