@@ -10,9 +10,7 @@
   announcementsEle.className =
     " font-josefin text-xl absolute top-32 right-14 slide-out-right";
   announcementsEle.id = "announcements";
-  announcementsEle.innerText = "Player 1's turn";
 
-  layout.className = "container mt-3 bg-gray-300 p-3 rounded-2xl mx-auto";
   navBar.className =
     "container bg-gray-300 rounded-2xl mx-auto flex justify-between";
 
@@ -27,6 +25,8 @@
     </div>
 </nav>`;
 
+  layout.className = "container mt-3 bg-gray-300 p-3 rounded-2xl mx-auto";
+
   layout.innerHTML = `<div class="container bg-gray-300 rounded-2xl mx-auto flex flex-col justify-between m-3">
   <div class="flex flex-col justify-between mx-auto m-3 items-center">
       <h1 class="font-josefin text-2xl">Player?</h1>
@@ -40,17 +40,26 @@
 
   </div>
 
-  <div class="container mx-auto w-2/4 p-3 h-3/4 flex items-center justify-center">
+  <div class="container mx-auto w-2/4 p-3 mt-10 h-3/4 flex items-center justify-center">
       <div class="grid grid-cols-3 place-items-center">
-          <button class="gameCard border-4 border-l-0 border-t-0 text-9xl min-h-36 min-w-32"></button>
-          <button class="gameCard border-4 border-l-0 border-r-0 border-t-0 text-9xl min-h-36 min-w-32 "></button>
-          <button class="gameCard border-4 border-r-0 border-t-0 text-9xl min-h-36 min-w-32"></button>
-          <button class="gameCard border-4 border-l-0 text-9xl min-h-36 min-w-32 "></button>
-          <button class="gameCard border-4 border-l-0 border-r-0 text-9xl min-h-36 min-w-32 "></button>
-          <button class="gameCard border-4 border-r-0 text-9xl min-h-36 min-w-32"></button>
-          <button class="gameCard border-4 border-l-0 border-b-0 text-9xl min-h-36 min-w-32"></button>
-          <button class="gameCard border-4 border-l-0 border-r-0 border-b-0 text-9xl min-h-36 min-w-32"></button>
-          <button class="gameCard border-4 border-r-0 border-b-0 text-9xl min-h-36 min-w-32"></button>
+          <button
+              class="gameCard border-4 border-l-0 border-t-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32"></button>
+          <button
+              class="gameCard border-4 border-l-0 border-r-0 border-t-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32 "></button>
+          <button
+              class="gameCard border-4 border-r-0 border-t-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32"></button>
+          <button
+              class="gameCard border-4 border-l-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32 "></button>
+          <button
+              class="gameCard border-4 border-l-0 border-r-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32 "></button>
+          <button
+              class="gameCard border-4 border-r-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32"></button>
+          <button
+              class="gameCard border-4 border-l-0 border-b-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32"></button>
+          <button
+              class="gameCard border-4 border-l-0 border-r-0 border-b-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32"></button>
+          <button
+              class="gameCard border-4 border-r-0 border-b-0 text-5xl md:text-9xl min-h-16 md:min-h-36 min-w-16 md:min-w-32"></button>
       </div>
   </div>
 </div>`;

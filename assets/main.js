@@ -1,5 +1,5 @@
 import "./layout.js";
-import { announcements } from "./plpayerMove.js";
+import { _announcements } from "./plpayerMove.js";
 
 const game = (function () {
   //* create player
@@ -31,16 +31,7 @@ const game = (function () {
 
   //* Announce player choice and player turn
   // > Needs improving with text from from selected player's markers and when each turn is
-  function _playerMovement() {
-    const ele = document.getElementById("announcements");
-    ele.classList.remove("slide-out-right");
-    ele.classList.add("slide-in-right");
-
-    setTimeout(() => {
-      ele.classList.remove("slide-in-right");
-      ele.classList.add("slide-out-right");
-    }, 2000);
-  }
+  //< Chould add an effect for stacking text ( as notifications ) for each movement, or just add notifications like event if the function is triggered many times
 
   //* cache DOM
   const test = document.querySelectorAll(".gameCard");
@@ -56,7 +47,9 @@ const game = (function () {
     player.addEventListener("click", _storePlayer);
   });
 
-  resetGame.addEventListener("click", _resetGame);
+  resetGame.addEventListener("click", () =>
+    _announcements("sarmale prajite sa ma cac pe mine")
+  );
 
   function _toggleXO(e) {
     const card = e.target;
