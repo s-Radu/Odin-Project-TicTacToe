@@ -65,7 +65,11 @@ const game = (function () {
     //   if (!card.hasChildNodes()) { //* Both of these conditions work, initially tried with reverse condition on hasChildNodes, but encountered an error where I had empty spaces in HTML and it would not work, because hasChildNodes checks for empty spaces as well ( white space ).
     if (card.textContent.trim() === "") {
       const element = document.createElement("p");
-      element.innerText = PLAYER1.marker;
+      if (PLAYER1.marker === undefined) {
+        alert("Please choose a marker");
+      } else {
+        element.innerText = PLAYER1.marker;
+      }
       card.appendChild(element);
     } else {
       console.log("You can't park there mate");
