@@ -1,4 +1,5 @@
 import "./layout.js";
+import { announcements } from "./plpayerMove.js";
 
 const game = (function () {
   //* create player
@@ -25,14 +26,26 @@ const game = (function () {
         : (PLAYER2 = _createPlayer("Player 2", "X"));
     }
 
-    console.log(
-      `${PLAYER1.name} has marker ${PLAYER1.marker} and ${PLAYER2.name} has marker ${PLAYER2.marker}`
-    );
+    alert(`Player 1 is ${PLAYER1.marker} and Player 2 is ${PLAYER2.marker}`);
+  }
+
+  //* Announce player choice and player turn
+  // > Needs improving with text from from selected player's markers and when each turn is
+  function _playerMovement() {
+    const ele = document.getElementById("announcements");
+    ele.classList.remove("slide-out-right");
+    ele.classList.add("slide-in-right");
+
+    setTimeout(() => {
+      ele.classList.remove("slide-in-right");
+      ele.classList.add("slide-out-right");
+    }, 2000);
   }
 
   //* cache DOM
   const test = document.querySelectorAll(".gameCard");
   const players = document.querySelectorAll(".player");
+  const resetGame = document.querySelector("#restartGame");
 
   // * bind events
   test.forEach((card) => {
@@ -42,6 +55,8 @@ const game = (function () {
   players.forEach((player) => {
     player.addEventListener("click", _storePlayer);
   });
+
+  resetGame.addEventListener("click", _resetGame);
 
   function _toggleXO(e) {
     const card = e.target;

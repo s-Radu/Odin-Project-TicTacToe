@@ -2,8 +2,15 @@
 
 (function () {
   const body = document.querySelector("body");
+
   const navBar = document.createElement("nav");
   const layout = document.createElement("div");
+  const announcementsEle = document.createElement("p");
+
+  announcementsEle.className =
+    " font-josefin text-xl absolute top-32 right-14 slide-out-right";
+  announcementsEle.id = "announcements";
+  announcementsEle.innerText = "Player 1's turn";
 
   layout.className = "container mt-3 bg-gray-300 p-3 rounded-2xl mx-auto";
   navBar.className =
@@ -49,4 +56,5 @@
 </div>`;
   body.appendChild(navBar);
   body.appendChild(layout);
+  body.appendChild(announcementsEle);
 })();
