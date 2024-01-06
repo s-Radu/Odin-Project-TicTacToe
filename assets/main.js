@@ -18,10 +18,16 @@ const game = (function () {
 
   function _storePlayer(e) {
     const chosenMarker = e.target.textContent;
-    PLAYER1 = _createPlayer("Player 1", chosenMarker);
-    PLAYER1.marker === "X"
-      ? (PLAYER2 = _createPlayer("Player 2", "O"))
-      : (PLAYER2 = _createPlayer("Player 2", "X"));
+    if (!PLAYER1) {
+      PLAYER1 = _createPlayer("Player 1", chosenMarker);
+      PLAYER1.marker === "X"
+        ? (PLAYER2 = _createPlayer("Player 2", "O"))
+        : (PLAYER2 = _createPlayer("Player 2", "X"));
+    }
+
+    console.log(
+      `${PLAYER1.name} has marker ${PLAYER1.marker} and ${PLAYER2.name} has marker ${PLAYER2.marker}`
+    );
   }
 
   //* cache DOM
