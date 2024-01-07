@@ -697,6 +697,10 @@ video {
   right: 0.5rem;
 }
 
+.right-28 {
+  right: 7rem;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -2808,6 +2812,10 @@ video {
 
   .xl\:right-32 {
     right: 8rem;
+  }
+
+  .xl\:right-28 {
+    right: 7rem;
   }
 }
 
