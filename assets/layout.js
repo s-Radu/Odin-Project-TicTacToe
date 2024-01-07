@@ -14,14 +14,14 @@
   navBar.className =
     "container bg-gray-300 rounded-2xl mx-auto flex justify-between";
 
-  navBar.innerHTML = ` <nav class="container bg-gray-300 rounded-2xl mx-auto flex justify-between items-center">
+  navBar.innerHTML = `  <nav class="container bg-gray-300 rounded-2xl mx-auto flex justify-between items-center">
   <div class="container flex justify-between">
       <img src="img/navImg.svg" alt="Logo" class="h-14 m-2 cursor-pointer">
       <div class="flex items-center ">
           <h1 class="font-josefin text-xl">Score </h1>
           <div class="flex flex-col items-center ml-2">
-              <p class="font-cursive text-xl">X : <span id='X'></span></p>
-              <p class="font-cursive text-xl">O : <span id='O'></span></p>
+              <p class="font-cursive text-xl">X : <span class="font-cursive text-3xl" id='X'>0</span></p>
+              <p class="font-cursive text-xl">O : <span class="font-cursive text-3xl" id='O'>0</span></p>
           </div>
       </div>
       <div class="items-center flex">

@@ -1,5 +1,6 @@
 import "./layout.js";
-import { _announcements } from "./plpayerMove.js";
+import { announcements } from "./plpayerMove.js";
+import { updateScore } from "./score.js";
 
 const game = (function () {
   //* cache DOM
@@ -30,11 +31,11 @@ const game = (function () {
         ? (PLAYER2 = _createPlayer("Player 2", "O"))
         : (PLAYER2 = _createPlayer("Player 2", "X"));
       PLAYNGPLAYER = PLAYER1;
-      _announcements(
+      announcements(
         `Player 1 is ${PLAYER1.marker} and Player 2 is ${PLAYER2.marker}`
       );
     } else {
-      _announcements("You can't change your marker");
+      announcements("You can't change your marker");
     }
   }
 
@@ -50,8 +51,7 @@ const game = (function () {
     PLAYNGPLAYER === PLAYER1
       ? (PLAYNGPLAYER = PLAYER2)
       : (PLAYNGPLAYER = PLAYER1);
-    _announcements(`${PLAYNGPLAYER.marker}'s turn`);
-    console.log(PLAYNGPLAYER);
+    announcements(`${PLAYNGPLAYER.marker}'s turn`);
   }
 
   //* Store board and win condition
@@ -89,7 +89,7 @@ const game = (function () {
 
   function _playerMove(e) {
     if (!PLAYNGPLAYER) {
-      _announcements("Please select a marker before making a move.");
+      announcements("Please select a marker before making a move.");
       return;
     }
 
@@ -97,13 +97,14 @@ const game = (function () {
     if (_isValidCard(card)) {
       _makeMove(card, PLAYNGPLAYER);
       if (_checkWin(PLAYNGPLAYER.marker)) {
-        _announcements(`${PLAYNGPLAYER.marker} has won the game!`);
+        announcements(`${PLAYNGPLAYER.marker} has won the game!`);
+        updateScore(PLAYNGPLAYER, 1);
         _endGame();
       } else {
         _swapPlayer();
       }
     } else {
-      _announcements("You can't park there mate");
+      announcements("You can't park there mate");
     }
   }
   //* End Game
@@ -136,6 +137,6 @@ const game = (function () {
 
   resetGame.addEventListener("click", () => {
     _endGame();
-    _announcements("Game has been reset");
+    announcements("Game has been reset");
   });
 })();

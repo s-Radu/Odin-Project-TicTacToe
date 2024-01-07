@@ -2,7 +2,7 @@
 
 let timeoutID = null;
 
-export function _announcements(text) {
+export function announcements(text) {
   const ele = document.getElementById("announcements");
   ele.classList.remove("slide-out-right");
   ele.classList.add("slide-in-right");
