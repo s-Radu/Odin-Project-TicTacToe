@@ -689,6 +689,14 @@ video {
   right: 1.5rem;
 }
 
+.right-3 {
+  right: 0.75rem;
+}
+
+.right-2 {
+  right: 0.5rem;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -2796,6 +2804,10 @@ video {
 @media (min-width: 1280px) {
   .xl\:right-24 {
     right: 6rem;
+  }
+
+  .xl\:right-32 {
+    right: 8rem;
   }
 }
 
