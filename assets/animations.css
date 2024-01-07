@@ -30,3 +30,20 @@
     opacity: 0;
   }
 }
+
+/*> X and O for the game */
+
+.markerX::after {
+  content: "X";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  z-index: 10000000;
+  color: red;
+}
+
+.markerO::after {
+  content: "O";
+}

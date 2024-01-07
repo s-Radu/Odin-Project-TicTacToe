@@ -653,60 +653,12 @@ video {
   inset-inline-end: 0.25rem;
 }
 
-.top-4 {
-  top: 1rem;
-}
-
-.right-0 {
-  right: 0px;
-}
-
-.top-10 {
-  top: 2.5rem;
-}
-
-.top-20 {
-  top: 5rem;
-}
-
-.top-3 {
-  top: 0.75rem;
-}
-
-.top-32 {
-  top: 8rem;
-}
-
-.right-2 {
-  right: 0.5rem;
-}
-
-.right-10 {
-  right: 2.5rem;
-}
-
-.right-20 {
-  right: 5rem;
-}
-
-.right-1 {
-  right: 0.25rem;
-}
-
-.right-12 {
-  right: 3rem;
-}
-
 .right-14 {
   right: 3.5rem;
 }
 
-.-right-14 {
-  right: -3.5rem;
-}
-
-.-right-20 {
-  right: -5rem;
+.top-32 {
+  top: 8rem;
 }
 
 .isolate {
@@ -774,24 +726,16 @@ video {
   margin-right: auto;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
 
 .mt-3 {
   margin-top: 0.75rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
 }
 
 .box-border {
@@ -901,10 +845,6 @@ video {
   height: 75%;
 }
 
-.min-h-36 {
-  min-height: 9rem;
-}
-
 .min-h-16 {
   min-height: 4rem;
 }
@@ -929,20 +869,8 @@ video {
   width: weird-and-invalid;
 }
 
-.min-w-32 {
-  min-width: 8rem;
-}
-
-.min-w-12 {
-  min-width: 3rem;
-}
-
 .min-w-16 {
   min-width: 4rem;
-}
-
-.min-w-20 {
-  min-width: 5rem;
 }
 
 .flex-shrink {
@@ -1967,11 +1895,6 @@ video {
   background-color: transparent;
 }
 
-.bg-gray-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-
 .decoration-slice {
   -webkit-box-decoration-break: slice;
           box-decoration-break: slice;
@@ -2155,24 +2078,14 @@ video {
   line-height: 2rem;
 }
 
-.text-9xl {
-  font-size: 8rem;
+.text-5xl {
+  font-size: 3rem;
   line-height: 1;
 }
 
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .font-bold {
@@ -2254,11 +2167,6 @@ video {
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
-}
-
-.text-gray-200 {
-  --tw-text-opacity: 1;
-  color: rgb(229 231 235 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2632,6 +2540,11 @@ video {
   }
 }
 
+.after\:absolute::after {
+  content: var(--tw-content);
+  position: absolute;
+}
+
 .after\:left-2\/4::after {
   content: var(--tw-content);
   left: 50%;
@@ -2640,6 +2553,40 @@ video {
 .after\:top-2\/4::after {
   content: var(--tw-content);
   top: 50%;
+}
+
+.after\:-translate-x-2\/4::after {
+  content: var(--tw-content);
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.after\:-translate-y-2\/4::after {
+  content: var(--tw-content);
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.after\:text-5xl::after {
+  content: var(--tw-content);
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.after\:text-gray-400::after {
+  content: var(--tw-content);
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.after\:content-\[\'\$\{PLAYER1\.marker\}\'\]::after {
+  --tw-content: '${PLAYER1.marker}';
+  content: var(--tw-content);
+}
+
+.after\:content-\[\'\$\{PLAYER2\.marker\}\'\]::after {
+  --tw-content: '${PLAYER2.marker}';
+  content: var(--tw-content);
 }
 
 .hover\:bg-blue-500:hover {
@@ -2675,45 +2622,6 @@ video {
 }
 
 @media (min-width: 640px) {
-  .sm\:min-h-12 {
-    min-height: 3rem;
-  }
-
-  .sm\:min-h-14 {
-    min-height: 3.5rem;
-  }
-
-  .sm\:min-h-16 {
-    min-height: 4rem;
-  }
-
-  .sm\:min-w-14 {
-    min-width: 3.5rem;
-  }
-
-  .sm\:min-w-10 {
-    min-width: 2.5rem;
-  }
-
-  .sm\:min-w-12 {
-    min-width: 3rem;
-  }
-
-  .sm\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
-  .sm\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
-  .sm\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-
   .sm\:underline {
     text-decoration-line: underline;
   }
@@ -2729,6 +2637,12 @@ video {
   }
 
   .md\:text-9xl {
+    font-size: 8rem;
+    line-height: 1;
+  }
+
+  .after\:md\:text-9xl::after {
+    content: var(--tw-content);
     font-size: 8rem;
     line-height: 1;
   }

@@ -15,7 +15,6 @@ const game = (function () {
 
   let PLAYER1 = "";
   let PLAYER2 = "";
-  // let playerAsigned = false;
 
   function _storePlayer(e) {
     const chosenMarker = e.target.textContent;
@@ -49,15 +48,24 @@ const game = (function () {
 
   //> Add hover effect for game card with player's choice
   gameCard.forEach((card) => {
-    card.addEventListener("mouseenter", _hoverEffect);
+    card.addEventListener("mouseenter", _addHoverEffect);
   });
   //> Remove hover effect from game card
+  // gameCard.forEach((card) => {
+  //   card.addEventListener("mouseleave", (e) => {
+  //     e.target.classList.remove(`after:content-['${PLAYER1.marker}']]`);
+  //   });
+  // });
 
   //* Hover effect for player choice
 
-  function _hoverEffect(e) {
-    e.textContent = PLAYER1.marker;
-    console.log("something is off boss");
+  function _addHoverEffect(e) {
+    const markerClass = `marker${PLAYER1.marker}}`;
+    if (PLAYER1.marker === undefined) {
+      return;
+    } else {
+      e.target.classList.add(markerClass);
+    }
   }
 
   function _toggleXO(e) {
