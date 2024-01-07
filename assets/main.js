@@ -51,6 +51,7 @@ const game = (function () {
       ? (PLAYNGPLAYER = PLAYER2)
       : (PLAYNGPLAYER = PLAYER1);
     _announcements(`${PLAYNGPLAYER.marker}'s turn`);
+    console.log(PLAYNGPLAYER);
   }
 
   //* Store board and win condition
@@ -97,12 +98,31 @@ const game = (function () {
       _makeMove(card, PLAYNGPLAYER);
       if (_checkWin(PLAYNGPLAYER.marker)) {
         _announcements(`${PLAYNGPLAYER.marker} has won the game!`);
+        _endGame();
       } else {
         _swapPlayer();
       }
     } else {
       _announcements("You can't park there mate");
     }
+  }
+  //* End Game
+  function _endGame() {
+    board.length = 0;
+    PLAYER1 = "";
+    PLAYER2 = "";
+    PLAYNGPLAYER = null;
+
+    gameCard.forEach((card) => {
+      card.removeEventListener("click", _playerMove);
+    });
+
+    setTimeout(() => {
+      gameCard.forEach((card) => {
+        card.textContent = "";
+        card.addEventListener("click", _playerMove);
+      });
+    }, 2000);
   }
 
   // * bind events
@@ -113,49 +133,9 @@ const game = (function () {
   players.forEach((player) => {
     player.addEventListener("click", _storePlayer);
   });
+
+  resetGame.addEventListener("click", () => {
+    _endGame();
+    _announcements("Game has been reset");
+  });
 })();
-
-//> Add hover effect for game card with player's choice
-// gameCard.forEach((card) => {
-//   card.addEventListener("mouseenter", _addHoverEffect);
-// });
-//> Remove hover effect from game card
-// gameCard.forEach((card) => {
-//   card.addEventListener("mouseleave", (e) => {
-//     e.target.classList.remove(`after:content-['${PLAYER1.marker}']]`);
-//   });
-// });
-
-//* Hover effect for player choice
-
-// function _addHoverEffect(e) {
-//   const markerClass = `marker${PLAYER1.marker}}`;
-//   if (PLAYER1.marker === undefined) {
-//     return;
-//   } else {
-//     e.target.classList.add(markerClass);
-//   }
-// }
-
-//   if (!card.hasChildNodes()) { //* Both of these conditions work, initially tried with reverse condition on hasChildNodes, but encountered an error where I had empty spaces in HTML and it would not work, because hasChildNodes checks for empty spaces as well ( white space ).
-// function _playerMove(e) {
-//   const card = e.target;
-//   if (card.textContent.trim() === "") {
-//     const element = document.createElement("p");
-//     if (PLAYER1.marker === undefined) {
-//       _announcements("Choose your marker first");
-//     } else {
-//       element.innerText = PLAYNGPLAYER.marker;
-//       //> swap players after each round
-//       PLAYNGPLAYER === PLAYER1
-//         ? (PLAYNGPLAYER = PLAYER2)
-//         : (PLAYNGPLAYER = PLAYER1);
-
-//       //> Announce player's turn
-//       _announcements(`${PLAYNGPLAYER.name}'s turn`);
-//     }
-//     card.appendChild(element);
-//   } else {
-//     console.log("You can't park there mate");
-//   }
-// }
