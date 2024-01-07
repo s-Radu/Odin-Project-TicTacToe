@@ -681,6 +681,14 @@ video {
   bottom: 50%;
 }
 
+.right-8 {
+  right: 2rem;
+}
+
+.right-6 {
+  right: 1.5rem;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -2698,6 +2706,26 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:right-1 {
+    right: 0.25rem;
+  }
+
+  .md\:right-14 {
+    right: 3.5rem;
+  }
+
+  .md\:right-10 {
+    right: 2.5rem;
+  }
+
+  .md\:right-8 {
+    right: 2rem;
+  }
+
+  .md\:bottom-20 {
+    bottom: 5rem;
+  }
+
   .md\:min-h-36 {
     min-height: 9rem;
   }
@@ -2727,6 +2755,34 @@ video {
     right: 3.5rem;
   }
 
+  .lg\:right-16 {
+    right: 4rem;
+  }
+
+  .lg\:right-20 {
+    right: 5rem;
+  }
+
+  .lg\:right-1 {
+    right: 0.25rem;
+  }
+
+  .lg\:right-2 {
+    right: 0.5rem;
+  }
+
+  .lg\:right-24 {
+    right: 6rem;
+  }
+
+  .lg\:right-10 {
+    right: 2.5rem;
+  }
+
+  .lg\:right-12 {
+    right: 3rem;
+  }
+
   .lg\:pb-5 {
     padding-bottom: 1.25rem;
   }
@@ -2734,6 +2790,30 @@ video {
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:right-24 {
+    right: 6rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:right-3 {
+    right: 0.75rem;
+  }
+
+  .\32xl\:right-32 {
+    right: 8rem;
+  }
+
+  .\32xl\:right-5 {
+    right: 1.25rem;
+  }
+
+  .\32xl\:right-52 {
+    right: 13rem;
   }
 }
 
