@@ -8,7 +8,7 @@
   const announcementsEle = document.createElement("p");
 
   announcementsEle.className =
-    " font-josefin text-xl absolute top-32 right-14 scale-out-center";
+    " font-josefin lg:text-xl absolute bottom-1/4 right-10 z-10 lg:top-32 lg:right-14 scale-out-center";
   announcementsEle.id = "announcements";
 
   navBar.className =
@@ -34,7 +34,7 @@
 
   layout.className = "container mt-3 bg-gray-300 p-3 rounded-2xl mx-auto";
 
-  layout.innerHTML = ` <div class="container bg-gray-300 rounded-2xl mx-auto flex flex-col justify-between m-3">
+  layout.innerHTML = ` <div class="container bg-gray-300 rounded-2xl mx-auto flex flex-col justify-between m-3 pb-60 lg:pb-5">
   <div class="flex flex-col justify-between mx-auto m-3 items-center">
       <h1 class="font-josefin text-2xl">Player?</h1>
 
