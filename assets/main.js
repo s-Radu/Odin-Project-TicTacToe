@@ -79,6 +79,11 @@ const game = (function () {
     const element = document.createElement("p");
     element.innerText = player.marker;
     card.appendChild(element);
+
+    //* get the index of the card
+    // const index = [...card.parentNode.children].indexOf(card); //* One way of getting the index of the card, it seems a bit hard to read
+    const index = parseInt(card.id, 10); //* This is a better way of getting the index of the card, it is easier to read and understand
+    board[index] = player.marker;
   }
 
   function _playerMove(e) {
@@ -91,7 +96,7 @@ const game = (function () {
     if (_isValidCard(card)) {
       _makeMove(card, PLAYNGPLAYER);
       if (_checkWin(PLAYNGPLAYER.marker)) {
-        console.log(`${PLAYNGPLAYER.marker} has won the game!`);
+        _announcements(`${PLAYNGPLAYER.marker} has won the game!`);
       } else {
         _swapPlayer();
       }
