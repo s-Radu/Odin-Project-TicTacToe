@@ -8,7 +8,7 @@
   const announcementsEle = document.createElement("p");
 
   announcementsEle.className =
-    " font-josefin lg:text-xl absolute bottom-1/4 md:bottom-20 right-6 lg:top-32 md:right-10 xl:right-24 scale-out-center";
+    " font-josefin lg:text-xl absolute bottom-1/4 md:bottom-20 right-6 lg:top-32 md:right-10 xl:right-24 lg:right-14 scale-out-center";
   announcementsEle.id = "announcements";
 
   navBar.className =
