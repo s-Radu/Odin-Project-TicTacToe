@@ -2073,6 +2073,10 @@ video {
   font-family: "Josefin Sans", sans-serif;
 }
 
+.font-cursive {
+  font-family: Delicious Handrawn, cursive;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -2581,11 +2585,6 @@ video {
 
 .after\:content-\[\'\$\{PLAYER1\.marker\}\'\]::after {
   --tw-content: '${PLAYER1.marker}';
-  content: var(--tw-content);
-}
-
-.after\:content-\[\'\$\{PLAYER2\.marker\}\'\]::after {
-  --tw-content: '${PLAYER2.marker}';
   content: var(--tw-content);
 }
 

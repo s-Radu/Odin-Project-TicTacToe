@@ -15,6 +15,7 @@ module.exports = {
         josefin: '"Josefin Sans", sans-serif',
         montserat: '"Montserrat", sans-serif',
         nunito: '"Nunito", sans-serif',
+        cursive: "Delicious Handrawn, cursive",
       },
       gridTemplateColumns: {
         "auto-fill": "repeat(auto-fill, minmax(320px, 1fr))",
