@@ -23,7 +23,7 @@ const game = (function () {
   let PLAYER2 = "";
   let PLAYNGPLAYER = null;
 
-  function _storePlayer(e) {
+  function _setPlayerMarker(e) {
     const chosenMarker = e.target.textContent;
     if (!PLAYER1) {
       PLAYER1 = _createPlayer("Player 1", chosenMarker);
@@ -98,7 +98,7 @@ const game = (function () {
       _makeMove(card, PLAYNGPLAYER);
       if (_checkWin(PLAYNGPLAYER.marker)) {
         announcements(`${PLAYNGPLAYER.marker} has won the game!`);
-        updateScore(PLAYNGPLAYER, 1);
+        updateScore(PLAYNGPLAYER);
         _endGame();
       } else {
         _swapPlayer();
@@ -107,17 +107,34 @@ const game = (function () {
       announcements("You can't park there mate");
     }
   }
-  //* End Game
-  function _endGame() {
+
+  //* Reset Game
+
+  function _resetGame(calledFromEndGame = false) {
+    if (!calledFromEndGame) {
+      const X = document.getElementById("X");
+      const O = document.getElementById("O");
+      X.textContent = 0;
+      O.textContent = 0;
+    }
+
     board.length = 0;
     PLAYER1 = "";
     PLAYER2 = "";
     PLAYNGPLAYER = null;
+    _clearBoard();
+  }
+
+  //* End Game
+  function _endGame() {
+    _resetGame(true);
 
     gameCard.forEach((card) => {
       card.removeEventListener("click", _playerMove);
     });
-
+    _clearBoard();
+  }
+  function _clearBoard() {
     setTimeout(() => {
       gameCard.forEach((card) => {
         card.textContent = "";
@@ -132,11 +149,11 @@ const game = (function () {
   });
 
   players.forEach((player) => {
-    player.addEventListener("click", _storePlayer);
+    player.addEventListener("click", _setPlayerMarker);
   });
 
   resetGame.addEventListener("click", () => {
-    _endGame();
+    _resetGame();
     announcements("Game has been reset");
   });
 })();
