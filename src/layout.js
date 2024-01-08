@@ -8,7 +8,7 @@
   const announcementsEle = document.createElement("p");
 
   announcementsEle.className =
-    " font-josefin lg:text-xl absolute bottom-1/4 md:bottom-20 right-6 lg:top-32 md:right-10 lg:right-20 xl:right-28 scale-out-center";
+    " font-josefin lg:text-xl absolute bottom-1/4 md:bottom-20 right-6 lg:top-32 md:right-10 lg:right-16 xl:right-28 scale-out-center";
   announcementsEle.id = "announcements";
 
   navBar.className =
@@ -72,5 +72,5 @@
 </div>`;
   body.appendChild(navBar);
   body.appendChild(layout);
-  layout.appendChild(announcementsEle);
+  //   layout.appendChild(announcementsEle);
 })();
