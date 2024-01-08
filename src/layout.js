@@ -8,7 +8,7 @@
   const announcementsEle = document.createElement("p");
 
   announcementsEle.className =
-    " font-josefin lg:text-xl absolute bottom-1/4 md:bottom-20 right-6 lg:top-32 md:right-10 lg:right-14 xl:right-28 scale-out-center";
+    " font-josefin lg:text-xl absolute bottom-1/4 md:bottom-20 right-6 lg:top-32 md:right-10 lg:right-20 xl:right-28 scale-out-center";
   announcementsEle.id = "announcements";
 
   navBar.className =
@@ -16,7 +16,7 @@
 
   navBar.innerHTML = `  <nav class="container bg-gray-300 rounded-2xl mx-auto flex justify-between items-center">
   <div class="container flex justify-between">
-      <img src="img/navImg.svg" alt="Logo" class="h-14 m-2 cursor-pointer">
+      <img src="assets/img/navImg.svg" alt="Logo" class="h-14 m-2 cursor-pointer">
       <div class="flex items-center ">
           <h1 class="font-josefin text-xl">Score </h1>
           <div class="flex flex-col items-center ml-2">
