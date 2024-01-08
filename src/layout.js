@@ -11,8 +11,7 @@
     " font-josefin lg:text-xl absolute bottom-1/4 md:bottom-20 right-6 lg:top-32 md:right-10 lg:right-16 xl:right-28 scale-out-center";
   announcementsEle.id = "announcements";
 
-  navBar.className =
-    "container bg-gray-300 rounded-2xl mx-auto flex justify-between";
+  navBar.className = " bg-gray-300 rounded-2xl mx-auto flex justify-between";
 
   navBar.innerHTML = `  <nav class="container bg-gray-300 rounded-2xl mx-auto flex justify-between items-center">
   <div class="container flex justify-between">
@@ -32,7 +31,7 @@
   </div>
 </nav>`;
 
-  layout.className = "container mt-3 bg-gray-300 p-3 rounded-2xl mx-auto";
+  layout.className = " mt-3 bg-gray-300 p-3 rounded-2xl mx-auto";
 
   layout.innerHTML = ` <div class="container bg-gray-300 rounded-2xl mx-auto flex flex-col justify-between m-3 pb-60 lg:pb-5">
   <div class="flex flex-col justify-between mx-auto m-3 items-center">
@@ -72,5 +71,5 @@
 </div>`;
   body.appendChild(navBar);
   body.appendChild(layout);
-  //   layout.appendChild(announcementsEle);
+    layout.appendChild(announcementsEle);
 })();

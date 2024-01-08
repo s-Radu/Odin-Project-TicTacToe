@@ -2708,6 +2708,16 @@ video {
   }
 }
 
+@media (min-width: 1536px) {
+  .\32xl\:right-3 {
+    right: 0.75rem;
+  }
+
+  .\32xl\:right-32 {
+    right: 8rem;
+  }
+}
+
 :is(:where(.dark) .dark\:bg-black) {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));

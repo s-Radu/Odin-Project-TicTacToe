@@ -157,8 +157,3 @@ const game = (function () {
     announcements("Game has been reset");
   });
 })();
-
-console.log(`VH : ${window.innerHeight} VW : ${window.innerWidth}`);
-console.log(
-  `User's screen height is ${screen.height} and width is ${screen.width}`
-);
