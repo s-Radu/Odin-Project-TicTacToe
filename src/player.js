@@ -1,5 +1,4 @@
-import "./layout.js";
-import { announcements } from "./plpayerMove.js";
+import { announcements } from "./announcements.js";
 import { updateScore } from "./score.js";
 
 const game = (function () {
